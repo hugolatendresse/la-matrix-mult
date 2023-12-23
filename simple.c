@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Parallel matrix multiplication
+    // Parallelize basic matrix multiplication 
     #pragma omp parallel for collapse(2)
     for (int i = 0; i < MAX; i++) {
         for (int j = 0; j < MAX; j++) {
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Displaying the result matrix
+    // Display the result
     printf("Result Matrix:\n");
     for (int i = 0; i < MAX; i++) {
         for (int j = 0; j < MAX; j++) {
